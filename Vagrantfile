@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.box = "base"
   config.vm.box = "ubuntu/xenial64"
-  config.vm.host_name = "jds_dev-vm"
+  config.vm.host_name = "jdsdev-vm"
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
   # Disable automatic box update checking. If you disable this, then
@@ -60,7 +60,7 @@ Vagrant.configure("2") do |config|
     virtualbox.gui    = false
     virtualbox.memory = 2048
     virtualbox.cpus   = 1
-    virtualbox.name   = "jds_dev-vm"
+    virtualbox.name   = "jdsdev-vm"
   end
   # View the documentation for the provider you are using for more
   # information on available options.

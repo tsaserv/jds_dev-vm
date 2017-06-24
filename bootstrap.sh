@@ -1,5 +1,5 @@
 #!/bin/sh
-udo apt-get -y install python-all
+sudo apt-get -y install python-all
 sudo apt-get -y install python-pip
 sudo apt-get -y install nginx
 pip install --upgrade pip
