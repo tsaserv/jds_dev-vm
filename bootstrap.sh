@@ -1,4 +1,5 @@
 #!/bin/sh
+export DEBIAN_FRONTEND=noninteractive
 sudo apt-get --yes -q update
 
 sudo apt-get -y install python-all
@@ -9,6 +10,8 @@ sudo pip install urllib3
 sudo  pip install stravalib
 
 sudo apt-get -y install nginx
+
+sudo shutdown -r now
 exit 0
 
 #buddycloud code
