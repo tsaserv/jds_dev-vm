@@ -1,11 +1,14 @@
 #!/bin/sh
+sudo apt-get --yes -q update
+
 sudo apt-get -y install python-all
 sudo apt-get -y install python-pip
-sudo apt-get -y install nginx
-pip install --upgrade pip
+sudo pip install --upgrade pip
 
 sudo pip install urllib3
 sudo  pip install stravalib
+
+sudo apt-get -y install nginx
 exit 0
 
 #buddycloud code
