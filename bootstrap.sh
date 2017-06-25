@@ -11,7 +11,6 @@ sudo  pip install stravalib
 
 sudo apt-get -y install nginx
 
-sudo shutdown -r now
 exit 0
 
 #buddycloud code
