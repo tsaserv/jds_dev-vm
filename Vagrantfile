@@ -60,7 +60,7 @@ Vagrant.configure("2") do |config|
   #
     dev1.vm.provider :virtualbox do |virtualbox|
       virtualbox.gui    = false
-      virtualbox.memory = 2048
+      virtualbox.memory = 4096
       virtualbox.cpus   = 1
       virtualbox.name   = "jdsdev1VM"
     end
@@ -90,12 +90,14 @@ Vagrant.configure("2") do |config|
       dev2.vm.host_name = "jdsdev2VM"
       dev2.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
       dev2.vm.network "forwarded_port", guest: 80, host: 8081
+      #Elastic Kibana
+      dev2.vm.network "forwarded_port", guest: 5601, host: 8601
       dev2.vm.synced_folder "/Users/jamesstorr/GitHub", "/host/GitHub"
       dev2.vm.synced_folder "/Users/jamesstorr/DevData", "/host/DevData"
 
       config.vm.provider :virtualbox do |virtualbox|
         virtualbox.gui    = false
-        virtualbox.memory = 1024
+        virtualbox.memory = 4096
         virtualbox.cpus   = 1
         virtualbox.name   = "jdsdev2VM"
       end
